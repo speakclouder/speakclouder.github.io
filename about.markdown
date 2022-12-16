@@ -4,15 +4,16 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello! I'm Stu, a qualified AWS Solutions Architect and DevOps professional with over a decades worth of experiance, based (near...) the southern most tip of the UK.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a consultant with an expertise in cloud architecture and automation. My background is in development, namely PHP, Laravel and Python - but my true passion is for AWS and all things cloud.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Right now, I'm working with one of the worlds largest pharmaceutical companies, enabling their developers get to production often, fix bugs quickly and experiment with new features by iterating (read: failing) fast.
 
+I am a huge proponant of serverless and love getting my head around security, monitoring and observability challenges.
 
-[jekyll-organization]: https://github.com/jekyll
+Ask me about serving Laravel through Lambda + APIGateway, load testing serverless compute, running Fargate based workers using EvenBridge rules (alerting when they report a non-zero exit code) or how the DORA 4 key metrics can change your development life forever.
+
+You can reach out to me on [twitter](https://twitter.com/speakclouder)
+
+![Stu Mason, DevOps & Solutions Architect Professional](/assets/img/profile.jpeg "Hello!")
