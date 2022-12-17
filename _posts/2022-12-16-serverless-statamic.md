@@ -2,7 +2,7 @@
 layout: post
 title:  "Serverless Laravel Statamic using CDK"
 date:   2022-12-16 11:44:08 +0000
-categories: serverless, laravel, lambda, AWS, CDK
+# categories: serverless, laravel, lambda, AWS, CDK
 ---
 
 ### Imagine if you could have a markdown blog, that's based on Laravel, that's entirely serverless... That's the dream right?
