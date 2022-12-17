@@ -5,7 +5,7 @@ date:   2022-12-16 11:44:08 +0000
 categories: serverless, laravel, lambda, AWS, CDK
 ---
 
-## Imagine if you could have a markdown blog, that's based on Laravel, that's entirely serverless... That's the dream right?
+### Imagine if you could have a markdown blog, that's based on Laravel, that's entirely serverless... That's the dream right?
 
 This post describes how I used AWS CDK (Python) to create a serverless Statamic app.
 
