@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: speak cloud
+title: speakcloud
 email: stu@speakcloud.consulting
 description: >- # this means to ignore newlines until "baseurl:"
   Secure, Serverless, Scalable - three words beginning with S.
