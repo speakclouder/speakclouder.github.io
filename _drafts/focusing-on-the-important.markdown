@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Focus on the important"
+title:  "Focus on the Important"
 date:   2022-12-16 11:44:08 +0000
-categories: speakcloud
+categories: speakcloud, productivity, focus, growth
 ---
 
-I've been meaning to set this site up for a long while now, it's taken me too long to get round to it (is 6 years too long?).
+I've been meaning to set this site up for a long while now, it's taken me too long to get round to it.
 
 In the past I've fought with github pages (what hosts this site) and I've lost many battles with Jekyll - I think because a) I ain't a ruby dev and b) I'm always trying to change the theme too much, add too much of my own styling, and generally make a mess of things. Too much tinkering (procrastination...).
 
