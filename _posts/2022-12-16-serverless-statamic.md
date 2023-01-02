@@ -5,44 +5,30 @@ date:   2022-12-16 11:44:08 +0000
 # categories: serverless, laravel, lambda, AWS, CDK
 ---
 
-### Imagine if you could have a markdown blog, that's based on Laravel, that's entirely serverless... That's the dream right?
-
 This post describes how I used AWS CDK (Python) to create a serverless Statamic app.
 
-"Dynamic" content is served by a Lambda function (using Bref) over an API Gateway HTTPApi, static content (images, css & js) is served by Cloudfront. It's got some fairly decent monitoring on it too.
-
-## Why?
-
-I like writing in markdown. Perhaps it's not as pretty as some editors, and there is a ton of syntax I can never remember - but still, it's lightweight and quick.
-
-I like Laravel, it's probably the best documented MVC out there, plus the fact it's popular as all hell means that [stackoverflow](https://stackoverflow.com/questions/tagged/laravel) definitely has 5 or 6 answers for that weird issue you've been having.
-
-I like serverless, it means I don't need to run updates on servers or worry that things are going to go down at 3am - my cloud provider (AWS) can handle that.
-
-So imagine if I could have a markdown blog, that is based on Laravel, that is entirely serverless? That's the dream right?
+"Dynamic" content is served by a Lambda function (using Bref) over an API Gateway HTTPApi, static content (images, css & js) is served by Cloudfront.
 
 ## Prerequisites
 
-* A decent terminal (I am using [Warp](https://www.warp.dev/) right now and it's cool)
-* A decent IDE/Text Editor (I am using VSCode + [CoPilot](https://copilot.github.com/) and I don't know how I survived without it)
+* A decent terminal (I am using [Warp](https://www.warp.dev/))
+* A decent IDE/Text Editor (I am using VSCode + [CoPilot](https://copilot.github.com/))
 * You have [AWS CDK](https://aws.amazon.com/cdk/) installed
 * You have [Docker desktop](https://www.docker.com/products/docker-desktop/) installed and running
 * You have [Laravel](https://laravel.com/) (valet or sail)
 * PHP and a little Python experience
-* You have an AWS account you can mess around with - don't worry, it's [cheap as chips](https://aws.amazon.com/lambda/pricing/)!
-
-> Right..... That's the ramble done, let's get down to business.
+* You have an AWS account you can mess around with
 
 ## Steps
 
-Install [Statamic](https://statamic.dev/) and kick off a new project using the least offensive theme there is...
+Install [Statamic](https://statamic.dev/) and kick off a new project:
 
 ```shell
 composer global require statamic/cli
 statamic new laravel-statamic-serverless
 ```
 
-This is going to give you a ton of prompts about the install, here's what I did:
+Follow prompts:
 
 ```shell
 1: Starter Kit # Because blank slates are no fun
@@ -87,7 +73,7 @@ git add .
 git commit -m 'initial commit'
 ```
 
-Before we get to the good stuff - I can't find a way of telling [Stache (statamics caching)](https://statamic.dev/stache) to respect the Lambda storage path (`/tmp/storage`), **if you can figure it out, please let me know!**
+I can't find a way of telling [Stache (statamics caching)](https://statamic.dev/stache) to respect the Lambda storage path (`/tmp/storage`), **if you can figure it out, please let me know!**
 
 Change Stache locks to false here in the Statamic config file `./config/statamic/stache.php`
 
@@ -105,16 +91,16 @@ Change Stache locks to false here in the Statamic config file `./config/statamic
     ],
 ```
 
-Almost done here, let's build the styles and JS:
+build the styles and JS:
 
 ```shell
 npm i
 npm run prod
 ```
 
-OK, one last thing before we move onto CDK - Because we're running this in a Lambda function we'll need to change the storage directory.
+Because we're running this in a Lambda function we'll need to change the storage directory.
 
-Inside your AppServiceProvider, let's force it to use the writable `/tmp` directory - let's also set the APP_URL as the root url - otherwise Cloudfront and API Gateway start arguing about who's who - in `./app/Providers/AppServiceProvider.php`'s boot function:
+Inside your AppServiceProvider, let's force it to use the writable `/tmp` directory - let's also set the APP_URL as the root url (otherwise Cloudfront and API Gateway start arguing about who's who) - in `./app/Providers/AppServiceProvider.php`'s boot function:
 
 ```php
     public function boot()
@@ -160,16 +146,12 @@ aws-cdk.aws-apigatewayv2-alpha
 cdk-monitoring-constructs
 ```
 
-**NOTE: Notice how I don't pin down these additional requirements to a specific version - I probably should be doing, but I haven't. Don't be like me, be better - pin yours down to the latest version**
-
-Pop into your virtual environment in python and install these requirements (you'll need to be in the `./cdk` directory in your terminal to do this):
+Install these requirements (you'll need to be in the `./cdk` directory in your terminal to do this):
 
 ```shell
 source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
 ```
-
-Nice, we're installed and our virtual env is activated.
 
 Open up the CDK stack that's been generated for us, and let's get the bare bones in place:
 
@@ -238,7 +220,7 @@ Say yes to the security prompt (it's making a couple of roles and giving those r
 
 ![No Style](/assets/img/statamic-no-styles.png)
 
-Would you look at that. It's like, kinda working huh. The thing is, it's trying to load our assets via Laravel, but that's static content. Let's sort this out
+It's trying to load our assets via Laravel, but that's static content. 
 
 ## Static Content
 
@@ -362,7 +344,7 @@ class CdkStack(Stack):
         CfnOutput(self, "DistributionURL", value=distro.domain_name)
 ```
 
-OK - So this is getting a little tastier. We've now:
+We have:
 
 * Added a cloudfront distribution which will direct all requests with the path `/assets` to an S3 bucket, the rest of the traffic goes directly to the API Gateway HTTP API (with a nice cache policy)
 * Created an S3 bucket for our assets and an OAI so Cloudfront can get objects from it
@@ -373,8 +355,6 @@ OK - So this is getting a little tastier. We've now:
 Let's run `cdk deploy` again and see where this gets us...
 
 ![Feature complete](/assets/img/finished.png)
-
-OK. That's pretty neat-o huh.
 
 Try a couple of things:
 
@@ -446,10 +426,6 @@ def test_core_resources_created():
 
 Run this in the terminal with `pytest` - you should get all greens!
 
-> Why didn't you TDD?
-
-I'll tell you why I didn't use a TDD flow - because my personal knowledge Cloudformation isn't that great, and to make assertions when writing tests - I assert against Cloudformation domain specific language, but I am not sure what that would be without reading the docs (which means reading the CDK docs and the CFn docs then writing tests, which is too long a process for me)
-
 ## How are you editing the content?
 
 I am editing the content locally in Markdown then running:
@@ -462,10 +438,4 @@ php please stache:refresh
 
 in my terminal, then deploying those changes when I am happy with them.
 
-## What's next?
-
-There are many many directions we can go with this. I think next up has to be a deployment pipeline right? Let's see if we can get Github deploying it
-
-I hope you enjoyed this journey
-
-> Good luck everybody, Stu
+Good luck!
