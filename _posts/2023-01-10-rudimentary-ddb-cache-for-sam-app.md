@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rudimentary DynamoDB Cache for SAM App"
-date:   2022-01-10 11:57:04 +0000
+date:   2023-01-10 11:57:04 +0000
 # categories: sam, dynamodb, cache
 ---
 
@@ -9,7 +9,7 @@ I'm currently using an AWS SAM application which has started to get 429 throttli
 
 This is a (very) rudimentary cache for DynamoDB which I'm using to reduce the number of calls to Cognito and S3.
 
-## Steps
+## Implementation
 
 Here is a rudiementary cache for DynamoDB:
 
@@ -184,3 +184,5 @@ I'd like to include a `TimeToLiveSpecification` against the table itself, but fo
 ```
 
 Plenty of room for improvement here, but it's gets us past the 429 throttling errors, we can take a breath and think about how to improve it.
+
+Idea 1: Catch throttling errors (or any error) and respond accordingly. Perhaps a throttling error from DynamoDB should return a None, or back off and retry n times before returning a None.

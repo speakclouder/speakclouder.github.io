@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing Event Bridge put_events with Moto"
-date:   2022-01-02 14:43:24 +0000
+date:   2023-01-02 14:43:24 +0000
 # categories: testing, eventbridge, moto
 ---
 
