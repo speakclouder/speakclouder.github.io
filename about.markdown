@@ -4,7 +4,7 @@ title: speakclouder
 permalink: /about/
 ---
 
-#### Welcome to Speakclou
+#### Welcome to Speakcloud
 
 A consultancy that specializses in DevOps, Serverless, AWS, and Python. We are dedicated to helping individuals and organizations improve their skills and stay ahead of the curve in today's ever-evolving tech landscape.
 
