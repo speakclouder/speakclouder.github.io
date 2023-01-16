@@ -18,6 +18,8 @@ I have a proven track record of success, with a wide range of clients in various
 
 If you're looking to improve your skills and stay ahead of the curve, I'm here to help. Contact me today to learn more about my workshops or to schedule a consultation.
 
-Email me at stu@speakcloud.consulting or drop me a message on Twitter. Visit my blog/resource page for more information and useful resources on the topics I specialize in.
+Email me at [stu@speakcloud.consulting](mailto:stu@speakcloud.consulting) or drop me a message on [twitter](https://twitter.com/speakclouder). 
 
-Don't miss out on my upcoming workshops. Drop me a message on Email or Twitter now and stay updated on my schedule.
+Visit my blog/resource page for more information and useful resources on the topics I specialise in.
+
+Don't miss out on my upcoming workshops. Email [stu@speakcloud.consulting](mailto:stu@speakcloud.consulting) or [twitter](https://twitter.com/speakclouder) now and stay updated on my schedule.
