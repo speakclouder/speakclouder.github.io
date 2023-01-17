@@ -1,25 +1,34 @@
 ---
 layout: page
-title: speakclouder
+title: speakcloud
 permalink: /about/
 ---
 
-#### Welcome to Speakcloud
+I gave the OpenAI API the lowdown on what SpeakCloud it intends to be, with the following parameters: 
 
-I am dedicated to helping individuals and organizations improve their skills and stay ahead of the curve in today's ever-evolving tech landscape.
+```
+array (
+  'prompt' => 'Speakcloud is a one man consultancy firm which runs workshops for people looking to improve their devops, serverless, AWS and Python knowledge. Can you write an about page for them.',
+  'ai_model_id' => 8, # text-davinci-003
+  'max_tokens' => 500,
+  'temperature' => 85,
+  'top_p' => 100,
+  'n' => 1,
+  'stream' => 0,
+  'echo' => 0,
+  'presence_penalty' => 100,
+  'frequency_penalty' => 100,
+  'best_of' => 1,
+  'suffix' => NULL,
+)  
+```
 
-I am a certified expert with years of experience working with devops, serverless, AWS and Python. I understand the importance of staying up-to-date with the latest developments in the field, and I am committed to providing the highest level of service and support to my clients.
+and this is the reply I got (some tiny edits): 
 
-I offer a wide range of workshops to help individuals and organizations improve their skills and take full advantage of the latest technologies. My workshops cover everything from the basics of Python programming to advanced topics in devops, serverless, and AWS. My workshops are designed to be hands-on, interactive, and tailored to specific skill levels and needs.
+Welcome to Speakcloud! We’re a one man consultancy firm that specialises in workshops for people looking to begin or expand their knowledge of cloud infrastructure, DevOps, Serverless technologies and Python programming.
 
-As an experienced instructor, I have a wealth of knowledge and experience in the field. I am passionate about sharing my knowledge and helping others to succeed.
+Our goal is simple: To equip our clients with the necessary skills needed to take full advantage of today's cutting edge technology stacks so they can maximise efficiency while staying agile and well-informed on industry best practices. Whether you are just getting your feet wet or want more advanced guidance into topics like DevOps automation pipelines or AWS architecture design principles - we've got it covered!
 
-I have a proven track record of success, with a wide range of clients in various industries. My testimonials speak to the high level of satisfaction of my customers.
+Our unique approach combines traditional workshop teaching concepts with personalised mentorship as an ongoing commitment once the course has come to an end; this provides you will all relevant resources & support materials ensuring successful adoption long after each session ends. Plus every project finished under us comes along side detailed strategic analysis reports from which key trends & insights can be extracted at any given time leading up towards greater decision making capabilities down the line — something most other companies simply don't offer thus providing a much higher added value proposition than expected by default standards within this field .
 
-If you're looking to improve your skills and stay ahead of the curve, I'm here to help. Contact me today to learn more about my workshops or to schedule a consultation.
-
-Email me at [stu@speakcloud.consulting](mailto:stu@speakcloud.consulting) or drop me a message on [twitter](https://twitter.com/speakclouder). 
-
-Visit my blog/resource page for more information and useful resources on the topics I specialise in.
-
-Don't miss out on my upcoming workshops. Email [stu@speakcloud.consulting](mailto:stu@speakcloud.consulting) or [twitter](https://twitter.com/speakclouder) now and stay updated on my schedule.
+Email me at [stu@speakcloud.consulting](mailto:stu@speakcloud.consulting) or drop me a message on [twitter](https://twitter.com/speakclouder).
