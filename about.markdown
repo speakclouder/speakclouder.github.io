@@ -4,7 +4,7 @@ title: speakcloud
 permalink: /about/
 ---
 
-I gave the OpenAI API the lowdown on what SpeakCloud it intends to be, with the following parameters: 
+I gave the OpenAI API the lowdown on what SpeakCloud intends to be, with the following parameters:
 
 ```
 array (
