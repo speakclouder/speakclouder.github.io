@@ -40,7 +40,7 @@ this.rds = new aws_rds.DatabaseInstance(this, "RDS", {
 });
 ```
 
-What I now need to do is get the secret during the CI/CD Pipeline, and put it into a .env file. 
+What I now need to do is get the secret during the CI/CD Pipeline, and put it into a .env file.
 
 I've created a script to do this for me (`touch database_credentials.sh && chmod +x database_credentials.sh`):
 
@@ -49,7 +49,7 @@ I've created a script to do this for me (`touch database_credentials.sh && chmod
 
 # This script is used to get database credentials from AWS Secrets Manager
 SECRET_NAME=$1
-RDS_CREDENTS=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME --profile speakcloud)
+RDS_CREDENTS=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME)
 echo -e "DB_PASSWORD=$(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .password')\nDB_USERNAME=$(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .username')" >> .env
 ```
 
@@ -80,4 +80,4 @@ deploymentStage.addPre(new ShellStep('BuildAssets', {
 }));
 ```
 
-We now have a .env file full of juicy secrets, ready to be consumed by our application.
+We now have a .env file full of juicy secrets, ready to be consumed by our application
