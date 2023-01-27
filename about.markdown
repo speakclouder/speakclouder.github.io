@@ -23,7 +23,7 @@ array (
 )  
 ```
 
-and this is the reply I got (some tiny edits): 
+and this is the reply I got (some tiny edits):
 
 Welcome to Speakcloud! We’re a one-man consultancy firm that specializes in workshops for people looking to begin or expand their knowledge of cloud infrastructure, DevOps, Serverless technologies, and Python programming. Our workshops are designed to equip our clients with the necessary skills to take full advantage of today's cutting-edge technology stacks, so they can maximize efficiency while staying agile and well-informed on industry best practices.
 
