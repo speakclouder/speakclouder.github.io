@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Key AWS Services for Python API Development"
-date:   2022-12-27 11:44:08 +0000
+date:   2023-01-27 11:44:08 +0000
+# categories: aws, python, api
 ---
 
 AWS offers over 200 different services, making it overwhelming for people new to it to know where to start when building something like a serverless Python API.
