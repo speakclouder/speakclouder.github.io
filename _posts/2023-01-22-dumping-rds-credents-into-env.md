@@ -72,7 +72,7 @@ deploymentStage.addPre(new ShellStep('BuildAssets', {
     },
     commands: [
     './db_credentials.sh $rds_secret',
-    './environment_varuables.sh $environment_secrets',
+    './environment_variables.sh $environment_secrets',
     'composer install',
     'npm ci',
     'npm run build',
