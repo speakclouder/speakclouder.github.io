@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting CDK RDS credentials from secretsmanager to a .env"
-date:   2023-01-10 11:57:04 +0000
+date:   2023-01-22 11:57:04 +0000
 categories: CDK, development, .env, secretsmanager
 ---
 
@@ -46,11 +46,13 @@ I've created a script to do this for me (`touch database_credentials.sh && chmod
 
 ```bash
 #!/bin/bash
-
-# This script is used to get database credentials from AWS Secrets Manager
+# Get your RDS secrets from AWS Secrets Manager
 SECRET_NAME=$1
 RDS_CREDENTS=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME)
-echo -e "DB_PASSWORD=$(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .password')\nDB_USERNAME=$(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .username')" >> .env
+echo "SecretString Password:"
+echo $(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .password')
+echo "SecretString Username:"
+echo $(echo $RDS_CREDENTS | jq '.SecretString | fromjson | .username')
 ```
 
 I then run this script in the pipeline:

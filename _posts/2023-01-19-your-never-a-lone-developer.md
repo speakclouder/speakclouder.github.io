@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "You're never a sole developer"
+title:  "You're never a lone developer"
 date:   2023-01-10 11:57:04 +0000
 categories: process, flow, development
 ---
