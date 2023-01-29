@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="list-none p-0">
+      {%- for post in site.posts -%}
+      <li class="p-0">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+
+        <article class="">
+          <header class="">
+                <p class="font-light text-sm text-gray-400 pb-0 mb-0"><time>{{ post.date | date: date_format }}</time></p>
+                <a class="text-2xl font-extrabold lg:text-4xl text-white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </header>
+          </article>
+
+
+
+        <span class="post-meta"></span>
+        <h3>
+          
+            
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }} 
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>

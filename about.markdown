@@ -1,6 +1,6 @@
 ---
 layout: page
-title: speakcloud
+title: about
 permalink: /about/
 ---
 
