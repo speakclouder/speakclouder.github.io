@@ -1,16 +1,12 @@
 ---
-layout: default
+layout: page
+title: Blog
+permalink: /blog/
 ---
 
+
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
   {%- if site.posts.size > 0 -%}
-    <h2 class="">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="list-none p-0">
       {%- for post in site.posts -%}
       <li class="p-0">
@@ -18,7 +14,7 @@ layout: default
         <article class="">
           <header class="">
                 <p class="font-light text-sm text-gray-400 pb-0 mb-0"><time>{{ post.date | date: date_format }}</time></p>
-                <a class="text-2xl no-underline font-extrabold lg:text-4xl hover:underline hover:decoration-amazon" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                <a class="text-xl no-underline font-extrabold lg:text-3xl hover:underline hover:decoration-amazon" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
             </header>
           </article>
         {%- if site.show_excerpts -%}
