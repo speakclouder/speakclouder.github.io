@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AWS Insight: Know the service you're using well enough"
-date: 2023 11:44:08 +0000
+date: 2023-02-07 11:44:08 +0000
 # categories: aws, services, insight
 ---
 
