@@ -7,7 +7,7 @@ categories: aws, python, api
 
 AWS offers over 200 different services, making it overwhelming for people new to it to know where to start when building web applications.
 
-This series of blog posts describes the *"Bakers Dozen"* (13...) key AWS services that you need to know _well enough_ to build a powerful, scalable and secure web service.
+This series of blog posts describes the *"Bakers Dozen"* (13...) key AWS services that you need to know [well enough](https://www.speakcloud.consulting/aws,/python,/api/2023/01/07/know-a-service-well-enough.html) to build a powerful, scalable and secure web service.
 
 In this post, we'll be looking at the 13 services that you need to know to build a *serverless Python API in AWS*.
 
