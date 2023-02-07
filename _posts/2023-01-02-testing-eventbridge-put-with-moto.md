@@ -2,7 +2,7 @@
 layout: post
 title:  "Eventbridge: Testing Event Bridge put_events with Moto"
 date:   2023-01-02 14:43:24 +0000
-categories: testing, eventbridge, moto
+# categories: testing, eventbridge, moto
 ---
 
 This post describes how I tested a Python Lambda Function doing a put_event to EventBridge using moto

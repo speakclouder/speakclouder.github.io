@@ -2,7 +2,7 @@
 layout: post
 title:  "DynamoDB: Rudimentary DDB Cache for Serverless App"
 date:   2023-01-10 11:57:04 +0000
-categories: sam, dynamodb, cache, testing, moto
+# categories: sam, dynamodb, cache, testing, moto
 ---
 
 I'm currently using an AWS SAM application which has started to get 429 throttling responses from various AWS services.

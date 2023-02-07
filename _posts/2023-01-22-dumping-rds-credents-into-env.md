@@ -2,7 +2,7 @@
 layout: post
 title:  "CDK: Getting RDS credentials from secretsmanager to a .env"
 date:   2023-01-22 11:57:04 +0000
-categories: CDK, development, .env, secretsmanager
+# categories: CDK, development, .env, secretsmanager
 ---
 
 When creating an RDS instance using CDK, I generate the credentials using aws_secretsmanager.Secret, like this:
