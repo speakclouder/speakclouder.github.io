@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "You're never a lone developer"
+title:  "DevLife: You're never a lone developer"
 date:   2023-01-10 11:57:04 +0000
-categories: process, flow, development
+categories: process, flow, development, devlife
 ---
 
 As a developer, it's easy to fall into the trap of thinking that you're working alone on a project - especially when you're working alone on a project.

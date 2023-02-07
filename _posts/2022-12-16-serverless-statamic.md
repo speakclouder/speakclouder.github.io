@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Serverless Laravel Statamic using CDK"
+title:  "CDK: Serverless Laravel Statamic"
 date:   2022-12-16 11:44:08 +0000
 # categories: serverless, laravel, lambda, AWS, CDK
 ---
 
 This post describes how I used AWS CDK (Python) to create a serverless Statamic app.
+
+I don't include a good store (RDS), or a queue worker, or the ability to run artisan. These are all coming soon in anohter post!
 
 "Dynamic" content is served by a Lambda function (using Bref) over an API Gateway HTTPApi, static content (images, css & js) is served by Cloudfront.
 

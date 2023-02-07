@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting CDK RDS credentials from secretsmanager to a .env"
+title:  "CDK: Getting RDS credentials from secretsmanager to a .env"
 date:   2023-01-22 11:57:04 +0000
 categories: CDK, development, .env, secretsmanager
 ---
