@@ -1,38 +1,34 @@
-<nav class="relative flex flex-wrap items-center justify-between px-2 bg-gray-900 text-gray-200 shadow-lg">
-  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-      <a class="text-sm font-bold leading-relaxed inline-block py-2 whitespace-nowrap uppercase text-white" href="/">
+<nav class="p-2 bg-gray-900 text-gray-200 shadow-lg top-0 z-50 no-wrap">
+    <div class="w-full flex">
+      <a class="" href="/">
         <img src="{{ "/assets/img/speakcloud_clouds.png" | relative_url }}" alt="logo" class="h-8">
       </a>
-      <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block outline-none focus:outline-none lg:hidden" type="button" onclick="toggleNavbar('example-collapse-navbar')">
-        <i class="fas fa-bars text-white bg-white"></i>
-        Menu
+      <button class="cursor-pointer uppercase text-2xl" type="button" id="menu-toggle" onclick="toggleNavbar('collapse-navbar')" style="margin-left: auto">
+        <i class="fa-solid fa-burger"></i>
       </button>
     </div>
-    <div class="lg:flex flex-grow items-center hidden transition ease-in-out mb-2" id="example-collapse-navbar">
+    <div class="hidden uppercase w-full text-right flex" id="collapse-navbar">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {%- if page_paths -%}
-      <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-        <li class="nav-item flex items-center text-white">
-          <a class="pr-3 text-xl hover:opacity-75 font-semibold" href="/">Home</a>
-        </li>
+        <div>
+          <a class="hover:opacity-75" href="/">Home</a>
+        </div>
         {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}
-          <li class="nav-item flex items-center text-white">
-            <a class="pr-3 text-xl hover:opacity-75 font-semibold" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          </li>
+          <div class="">
+            <a class="hover:opacity-75" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          </div>
           {%- endif -%}
         {%- endfor -%}
-        </ul>
+        </div>
       {%- endif -%}
-    </div>
-  </div>
 </nav>
 <script>
   function toggleNavbar(collapseID){
     document.getElementById(collapseID).classList.toggle("hidden");
     document.getElementById(collapseID).classList.toggle("flex");
+    document.getElementById("menu-toggle").classList.toggle("opacity-20");
   }
 </script>
