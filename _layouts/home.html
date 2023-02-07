@@ -1,34 +1,37 @@
 ---
-layout: default
+layout: non-standard
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="prose prose-invert bg-no-repeat bg-cover" style="background-image: url('/assets/img/code.jpg');">
+  <div class="w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.8)">
+    <div class="container mx-auto max-w-screen-md text-center py-10">
+      <div class="flex h-2/3">
+        <div class="m-auto">
+          <img src="/assets/img/speakcloud_clouds.png" alt="logo" class="object-center object-contain inline">
+          <h1 class="text-5xl uppercase text-white mb-2">Speakcloud</h1>
+          <p class="text-2xl text-white">Let's build the cloud together</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="list-none p-0">
-      {%- for post in site.posts -%}
-      <li class="p-0">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <article class="">
-          <header class="">
-                <p class="font-light text-sm text-gray-400 pb-0 mb-0"><time>{{ post.date | date: date_format }}</time></p>
-                <a class="text-2xl no-underline font-bold lg:text-3xl hover:underline hover:decoration-amazon" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </header>
-          </article>
-        {%- if site.show_excerpts -%}
-          <p class="prose">{{ post.excerpt }}</p>
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+<div class="prose prose-invert bg-slate-800">
+  <div class="container mx-auto max-w-screen-md text-center py-10">
+    <div class="flex h-2/3">
+      <div class="m-auto">
+        <p>Welcome to Speakcloud! We’re a one-man consultancy that specializes in workshops
+           for people looking to begin or expand their knowledge of cloud infrastructure, DevOps, 
+           Serverless technologies, and Python programming. </p>
+        <p>Our workshops are designed to equip our clients with the necessary
+           skills to take full advantage of today's cutting-edge technology stacks, 
+           so they can maximize efficiency while staying agile and well-informed 
+           on industry best practices.</p>
+        <p class="text-2xl font-bold uppercase">Get in touch now</p>
+        <p>If you're ready to take your skills to the next level, email us at <a class="no-underline hover:underline hover:decoration-amazon" href="mailto:stu@speakcloud.consulting">stu@speakcloud.consulting</a> 
+          or drop us a message on <a class="no-underline hover:underline hover:decoration-amazon" href="https://twitter.com/speakclouder">Twitter</a>. 
+          We'd love to hear from you and help you on your journey to becoming a cloud infrastructure, 
+          DevOps, Serverless technologies, and Python programming expert.</p>
+      </div>
+    </div>
 </div>
