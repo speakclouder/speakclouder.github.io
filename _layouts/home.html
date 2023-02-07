@@ -18,7 +18,7 @@ layout: default
         <article class="">
           <header class="">
                 <p class="font-light text-sm text-gray-400 pb-0 mb-0"><time>{{ post.date | date: date_format }}</time></p>
-                <a class="text-2xl no-underline font-extrabold lg:text-4xl hover:underline hover:decoration-amazon" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                <a class="text-2xl no-underline font-bold lg:text-3xl hover:underline hover:decoration-amazon" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
             </header>
           </article>
         {%- if site.show_excerpts -%}

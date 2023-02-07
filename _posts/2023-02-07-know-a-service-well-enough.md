@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AWS Insight: Know the service you're using well enough"
-date:   2023-01-27 11:44:08 +0000
+date:   2023-01-07 11:44:08 +0000
 categories: aws, python, api
 ---
 
@@ -28,7 +28,7 @@ So - how are you going to answer these questions? Here's what I do:
 
 ## What is it?
 
-Someones just mentioned this new (...to you) service and you've totally agreed with them that it sounds like the best solution to your problem. They end the zoom call and you're left thinking "what the hell did I just agree to?" - now what? First - go and read the FAQ. This is nearly always the best place to start, it'll tell you exactly what it is and what it isn't. Skim it, read all the questions first then go back and read all the answers, start to digest what they are saying about the service slowly.
+Someones just mentioned this new (...to you) service and you've totally agreed with them that it sounds like the best solution to your problem. They end the call and you're left thinking "what the hell did I just agree to?" - now what? First - go and read the FAQ. This is nearly always the best place to start, it'll tell you exactly what it is and what it isn't. Skim it, read all the questions first then go back and read all the answers, start to digest what they are saying about the service slowly. 
 
 ## What does it do?
 
