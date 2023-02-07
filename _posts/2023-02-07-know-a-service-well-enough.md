@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "AWS Insight: Know the service you're using well enough"
-date:   2023-02-07 11:44:08 +0000
-categories: aws, python, api
+title: "AWS Insight: Know the service you're using well enough"
+date: 2023 11:44:08 +0000
+categories: aws, services, insight
 ---
 
 AWS offers over 200 different services, making it overwhelming for people new to it to know where to start when building web applications.
