@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <!-- {%- include header.html -%} -->
+    
+    {{ content }} 
+
+    {%- include footer.html -%}
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XAsb6M"></script>
+    <script>
+      const targets = document.querySelectorAll(".js-show-on-scroll");
+      const callback = function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("motion-safe:animate-fadeIn");
+          } else {
+            entry.target.classList.remove("motion-safe:animate-fadeIn");
+          }
+        });
+      };
+      const observer = new IntersectionObserver(callback);
+      targets.forEach(function(target) {
+        target.classList.add("opacity-0");
+        observer.observe(target);
+      });
+
+      const targetsDrop = document.querySelectorAll(".js-drop-on-scroll");
+      const callbackDrop = function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("motion-safe:animate-dropIn");
+          } else {
+            entry.target.classList.remove("motion-safe:animate-dropIn");
+          }
+        });
+      };
+      const observerDrop = new IntersectionObserver(callbackDrop);
+      targetsDrop.forEach(function(target) {
+        target.classList.add("opacity-0");
+        observer.observe(target);
+      });
+    </script>
+  </body>
+
+</html>

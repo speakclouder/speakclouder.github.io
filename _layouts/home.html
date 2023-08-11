@@ -31,39 +31,17 @@ layout: non-standard
   <div class="container mx-auto max-w-screen-md py-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-center">
       <div class="mx-3 md:mx-0 rounded-lg backdrop-blur-md p-10 shadow-lg">
-        <h4 class="text-2xl mb-6">Lightning-fast Delivery times will blow your mind</h4>
-
-        <span class="text-white">
-          <i class="fa-solid fa-truck-fast"></i>
-          <i class="fa-solid fa-truck-fast"></i>
-          <i class="fa-solid fa-truck-fast"></i>
-          <i class="fa-solid fa-truck-fast"></i>
-          <i class="fa-solid fa-truck-fast"></i>
-          <i class="fa-solid fa-truck-fast"></i>
-        </span>
-        
-        
-        <p class="">With extensive experience in AWS and Development, we streamline your cloud engineering projects, delivering results at an unprecedented pace. 
-          Our expertise along with bleeding-edge tooling enables us to identify the most efficient solutions for your business, saving you time and resources.
-        </p>
-  
+        <h4 class="text-2xl mb-6">Lightning-fast delivery times and iteration speed provide instant value, then keep on giving</h4>
       </div>
       <div class="mx-3 md:mx-0 rounded-lg backdrop-blur-md p-10 shadow-lg">
-        <h4 class="text-2xl mb-6">Long-term value delivered through best practices</h4>
+        <h4 class="text-2xl mb-6">Long-term value delivered through best practices, lovingly made by artisans</h4>
+      </div>
 
-        <span class="text-white">
-          <i class="fa-solid fa-pen-nib"></i>
-          <i class="fa-solid fa-pen-nib"></i>
-          <i class="fa-solid fa-pen-nib"></i>
-          <i class="fa-solid fa-pen-nib"></i>
-          <i class="fa-solid fa-pen-nib"></i>
-          <i class="fa-solid fa-pen-nib"></i>
-        </span>
-        
-        <p>
-          Our commitment to well-written, well-tested code, Infrastructure as Code (IAC), CI/CD pipelines, and comprehensive documentation ensures lasting value for your organization. 
-          By adhering to industry best practices, we create sustainable and maintainable systems that grow with your business.
-        </p>
+      <div class="mx-3 md:mx-0 rounded-lg backdrop-blur-md p-10 shadow-lg">
+        <h4 class="text-2xl mb-6">In-depth documentation and ADRs means a enjoyable, clean codebase for all</h4>
+      </div>
+      <div class="mx-3 md:mx-0 rounded-lg backdrop-blur-md p-10 shadow-lg">
+        <h4 class="text-2xl mb-6">Expertise, experience and reliability shines through in the product</h4>
       </div>
     </div>
   </div>  
@@ -71,16 +49,41 @@ layout: non-standard
 
 <div class="prose prose-invert bg-slate-800" style="background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(30,41,59,0.9234287464985994) 0%, rgba(30,41,59,1) 100%);">
   <div class="container mx-auto max-w-screen-md py-14">
+    <div class="flex h-1/2">
+      <div class="m-auto px-10">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+          <div class="p-4">
+
+          </div>
+          <div class="p-4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="prose prose-invert bg-slate-800" style="background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(30,41,59,0.9234287464985994) 0%, rgba(30,41,59,1) 100%);">
+  <div class="container mx-auto max-w-screen-md py-14">
     <div class="flex h-2/3">
       <div class="m-auto px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="p-4 text-center">
-            <h2 class="text-3xl font-bold my-1">In-depth doc's and ADRs</h2>
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+          <div class="p-4 text-left">
+            <!-- <h2 class="text-3xl font-bold my-1">In-depth doc's and ADRs</h2> -->
+                <p>
+          Our commitment to well-written, well-tested code, Infrastructure as Code (IAC), CI/CD pipelines, and comprehensive documentation ensures lasting value for your organization. 
+          By adhering to industry best practices, we create sustainable and maintainable systems that grow with your business.
+        </p>
+
             <p>We understand the importance of clear and concise doc's, along with Architectural Decision Records. 
               Our thorough approach ensures that your team can easily understand and maintain the systems we create.</p>
           </div>
-          <div class="p-4 text-center">
-            <h2 class="text-3xl font-bold my-1">Expertise and reliability</h2>
+          <div class="p-4 text-left">
+            <!-- <h2 class="text-3xl font-bold my-1">Expertise and reliability</h2> -->
+            <p class="">With extensive experience in AWS and Development, we streamline your cloud engineering projects, delivering results at an unprecedented pace. 
+              Our expertise along with bleeding-edge tooling enables us to identify the most efficient solutions for your business, saving you time and resources.
+            </p>
+
             <p>With years of experience in DevOps, we pride ourselves on delivering fast and high-quality services without compromising on either aspect. 
              The value we deliver through our best practices speaks for itself.</p>
           </div>
@@ -91,4 +94,24 @@ layout: non-standard
           or drop me a message on <a class="no-underline hover:underline hover:decoration-amazon" href="https://twitter.com/speakclouder">Twitter</a> to discuss your cloud engineering needs.
       </div>
     </div>
+</div>
+
+
+<div class="prose prose-invert bg-slate-800 p-10" style="background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(30,41,59,0.9234287464985994) 0%, rgba(30,41,59,1) 100%);">
+  <div class="container mx-auto max-w-screen-md">
+    <h4 class="text-4xl font-light">Latest from the team</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      {%- if site.posts.size > 0 -%}
+          {%- for post in site.posts limit:3 -%}
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <div class="flex-1 p-6 border rounded-lg shadow bg-gray-800 border-gray-700">
+              <p class="font-light text-sm text-gray-400 pb-0 mb-0"><time>{{ post.date | date: date_format }}</time></p>
+              <a href="{{ post.url | relative_url }}" class="text-xl no-underline hover:underline hover:decoration-amazon">
+                  <h5 class="">{{ post.title | escape }}</h5>
+              </a>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
 </div>
